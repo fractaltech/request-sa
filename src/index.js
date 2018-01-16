@@ -33,4 +33,6 @@ function request(options) {
 
 request.activeRequests = new Set();
 
+request.isBusy = () => request.activeRequests.size;
+
 module.exports = request;

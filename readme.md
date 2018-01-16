@@ -8,8 +8,11 @@
 ### Version 1.0.0
 
 ### Usage
+Below is a sample code for how to use this library:
 
 ```js
+const request = require('request-sa');
+
 request({
   method: 'POST', // http method of the request
   headers: {}, // request headers
@@ -29,6 +32,20 @@ request({
 }).catch((err) => {
   // do something with err
 });
+```
+
+You can access the set of active-requests and check if the library is busy like this:
+```js
+console.log(request.activeRequests); // request.activeRequests is a "Set"
+console.log(request.isBusy()); // true or false
+```
+
+You can also abort a request midway like this:
+
+```js
+const reqPromise = request({...});
+
+reqPromise.abort();
 ```
 
 ### Todo:
