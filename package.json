@@ -1,6 +1,6 @@
 {
   "name": "request-sa",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "universal http lib with request like api over superagent",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,7 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-es2017": "^6.16.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^3.12.2"
   }
 }
