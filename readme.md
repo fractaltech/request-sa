@@ -16,7 +16,7 @@ const request = require('request-sa');
 request({
   method: 'POST', // http method of the request
   headers: {}, // request headers
-  qs: {}, // query string map
+  qs: {}, // query string map. Best used in GET requests
   json: {}, // send data like this for application/json requests. can also be set to "true",
   form: {}, // send data like this for application/x-www-form-urlencoded requests
   formData: (() => {
