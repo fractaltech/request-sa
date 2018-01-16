@@ -22,7 +22,8 @@ request({
     form.append('file', someFile);
 
     return form;
-  })() // send data like this for multipart/form-data requests
+  })(), // send data like this for multipart/form-data requests
+  getFullResponse: false // optional, defaults to "false". By default, successful requests only return response body
 }).then((resOrBody) => {
   // do something with res or body
 }).catch((err) => {
