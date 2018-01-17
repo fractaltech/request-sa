@@ -2,7 +2,7 @@ const sa = require('superagent');
 const {merge} = require('lodash');
 
 function request(options) {
-  const req = sa[options.method.toLowerCase()](options.uri)
+  const req = request.sa[options.method.toLowerCase()](options.uri)
     .set(merge({}, options.headers, options.json ? {'Content-Type': 'application/json'} : {}))
     .query(options.qs ? options.qs : {})
     .send(options.json || options.form || options.formData)
@@ -34,5 +34,7 @@ function request(options) {
 request.activeRequests = new Set();
 
 request.isBusy = () => request.activeRequests.size;
+
+request.sa = sa;
 
 module.exports = request;

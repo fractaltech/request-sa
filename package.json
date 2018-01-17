@@ -4,7 +4,7 @@
   "description": "universal http lib with request like api over superagent",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/main.js",
     "clean": "rm -rf lib",
     "build": "npm run clean && babel src --out-dir lib"
   },
@@ -14,6 +14,11 @@
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^3.12.2"
+    "eslint": "^3.12.2",
+    "eslint-plugin-babel": "^4.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "superagent": "^3.8.2"
   }
 }
